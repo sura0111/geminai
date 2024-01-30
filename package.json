@@ -1,6 +1,5 @@
 {
   "name": "geminai",
-  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "private": true,
@@ -19,8 +18,7 @@
     "lint": "nx run-many --target=lint --all",
     "build": "nx run-many --target=build --all",
     "test": "yarn vitest run",
-    "geminai": "yarn workspace geminai-chat-terminal run geminai",
-    "publish": "nx release"
+    "geminai": "yarn workspace geminai-chat-terminal run geminai"
   },
   "workspaces": [
     "packages/*"
@@ -30,6 +28,10 @@
     "*.{js,jsx,cjs,mjs,ts,tsx,mts,cts}": [
       "eslint"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sura0111/geminai.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
@@ -56,7 +58,7 @@
     "https-proxy-agent": "^7.0.2",
     "husky": "^9.0.7",
     "lint-staged": "^15.2.0",
-    "nx": "17.2.8",
+    "nx": "^17.3.0",
     "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",

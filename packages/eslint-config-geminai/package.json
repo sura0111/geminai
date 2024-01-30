@@ -1,6 +1,5 @@
 {
   "name": "eslint-config-geminai",
-  "version": "0.0.1",
   "type": "commonjs",
   "private": true,
   "scripts": {
