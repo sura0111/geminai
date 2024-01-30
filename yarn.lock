@@ -4960,7 +4960,7 @@ __metadata:
     https-proxy-agent: "npm:^7.0.2"
     husky: "npm:^9.0.7"
     lint-staged: "npm:^15.2.0"
-    nx: "npm:^17.3.0"
+    nx: "npm:17.3.0"
     prettier: "npm:^3.2.4"
     rimraf: "npm:^5.0.5"
     typescript: "npm:^5.3.3"
@@ -6654,7 +6654,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:17.3.0, nx@npm:^17.3.0":
+"nx@npm:17.3.0":
   version: 17.3.0
   resolution: "nx@npm:17.3.0"
   dependencies:
