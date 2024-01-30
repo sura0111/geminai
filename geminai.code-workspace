@@ -17,8 +17,19 @@
       "path": "./packages/eslint-config-geminai/"
     }
   ],
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+    ]
+  },
   "settings": {
     "javascript.preferences.importModuleSpecifier": "shortest",
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
     "eslint.workingDirectories": [
       ".",
       "./packages/chat",

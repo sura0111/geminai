@@ -1,5 +1,6 @@
 {
   "name": "eslint-config-geminai",
+  "version": "0.0.1",
   "type": "commonjs",
   "scripts": {
     "lint": "yarn g:lint"
