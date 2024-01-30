@@ -1,0 +1,5 @@
+.nx
+.yarn
+node_modules
+**/dist
+**/@types

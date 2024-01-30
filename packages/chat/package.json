@@ -1,0 +1,14 @@
+{
+  "name": "@packages/chat",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 yarn g:vite-node ./index.ts",
+    "build": "yarn g:build"
+  },
+  "bin": "./dist/index.mjs",
+  "devDependencies": {
+    "@types/yargs": "^17.0.32",
+    "yargs": "^17.7.2"
+  }
+}

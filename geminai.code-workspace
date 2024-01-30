@@ -1,0 +1,38 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "./"
+    },
+    {
+      "name": "chat",
+      "path": "./packages/chat/"
+    },
+    {
+      "name": "env",
+      "path": "./packages/env/"
+    },
+    {
+      "name": "tsconfig",
+      "path": "./packages/tsconfig/"
+    }
+  ],
+  "settings": {
+    "javascript.preferences.importModuleSpecifier": "shortest",
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/.ruby-lsp": true,
+      ".nx": true,
+      ".yarn": true,
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/coverage": true,
+      "**/@types": true,
+    }
+  }
+}

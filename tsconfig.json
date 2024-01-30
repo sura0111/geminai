@@ -1,0 +1,7 @@
+{
+  "extends": "@packages/tsconfig",
+  "include": [
+    "**/*.ts",
+    ".eslintrc.cjs",
+  ]
+}

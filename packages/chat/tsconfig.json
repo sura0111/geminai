@@ -1,0 +1,15 @@
+{
+  "extends": "@packages/tsconfig",
+  "compilerOptions": {
+    "declarationDir": "./@types",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "exclude": [
+    "dist",
+    "@types"
+  ]
+}
