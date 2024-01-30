@@ -2,7 +2,6 @@
   "version": "0.0.1",
   "name": "@geminai/chat",
   "type": "module",
-  "private": true,
   "scripts": {
     "geminai": "yarn g:vite-node ./bin/geminai.ts",
     "lint": "yarn g:lint",
