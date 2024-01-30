@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { type ConfigKeyProperty } from '@geminai/chat/types'
+import { type ConfigKeyProperty } from '@/types'
 
 export const useConfig = (filePath: string) => {
   const hasFile = fs.existsSync(filePath)

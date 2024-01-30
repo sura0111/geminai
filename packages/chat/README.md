@@ -7,13 +7,13 @@ Geminai is a terminal-based AI chatbot that runs on Node.js. It is a powerful to
 To install Geminai globally, run the following command:
 
 ```sh
-yarn global add @geminai/chat
+yarn global add geminai-chat-terminal
 ```
 
 To install Geminai locally, run the following command:
 
 ```sh
-yarn add -D @geminai/chat
+yarn add -D geminai-chat-terminal
 ```
 
 ## Usage
