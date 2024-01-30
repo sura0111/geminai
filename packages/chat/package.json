@@ -1,14 +1,51 @@
 {
-  "name": "@packages/chat",
+  "version": "0.0.1",
+  "name": "@geminai/chat",
   "type": "module",
   "private": true,
   "scripts": {
     "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 yarn g:vite-node ./index.ts",
-    "build": "yarn g:build"
+    "lint": "yarn g:lint",
+    "test": "yarn g:test",
+    "build": "yarn g:build",
+    "publish": "yarn g:build && yarn g:publish"
   },
-  "bin": "./dist/index.mjs",
-  "devDependencies": {
-    "@types/yargs": "^17.0.32",
+  "main": "./dist/index.mjs",
+  "bin": {
+    "geminai": "./dist/index.mjs"
+  },
+  "author": {
+    "name": "Sura Kh",
+    "email": "sura0111@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sura0111/geminai.git",
+    "directory": "packages/chat"
+  },
+  "keywords": [
+    "geminai",
+    "chat",
+    "gemini ai",
+    "ai",
+    "chatbot",
+    "terminal",
+    "code helper"
+  ],
+  "files": [
+    "dist",
+    "@types",
+    "README.md"
+  ],
+  "dependencies": {
+    "@google/generative-ai": "^0.1.3",
+    "axios": "^1.6.7",
+    "logdown": "^3.3.1",
+    "prompts": "^2.4.2",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2",
+    "@types/yargs": "^17.0.32"
   }
 }

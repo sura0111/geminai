@@ -9,10 +9,6 @@
       "path": "./packages/chat/"
     },
     {
-      "name": "env",
-      "path": "./packages/env/"
-    },
-    {
       "name": "tsconfig",
       "path": "./packages/tsconfig/"
     }

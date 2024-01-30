@@ -45,7 +45,7 @@ const createChat = (geminai: ReturnType<typeof useGeminai>) => {
               onSubmit: (prompt, answer: string) => {
                 output += `\n${answer}`
                 if (answer.endsWith(endFlag)) {
-                  logger.log('------------')
+                  logger.log('------------------\n')
                   resolve(output)
                   return
                 }

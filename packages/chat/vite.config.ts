@@ -6,4 +6,8 @@ export default defineConfig({
       '@': __dirname,
     },
   },
+  test: {
+    globals: true,
+    setupFiles: ['./test/setup.ts'],
+  },
 })

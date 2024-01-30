@@ -1,3 +1,4 @@
 {
-  "name": "@packages/tsconfig"
+  "name": "@geminai/tsconfig",
+  "version": "0.1.1"
 }

@@ -1,5 +1,5 @@
 {
-  "extends": "@packages/tsconfig",
+  "extends": "@geminai/tsconfig",
   "compilerOptions": {
     "declarationDir": "./@types",
     "paths": {
@@ -8,6 +8,18 @@
       ]
     }
   },
+  "include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.mjs",
+    "**/*.cjs",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mts",
+    "**/*.cts",
+    "**/*.json",
+    ".eslintrc.cjs",
+  ],
   "exclude": [
     "dist",
     "@types"

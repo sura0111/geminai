@@ -1,7 +1,19 @@
 {
-  "extends": "@packages/tsconfig",
+  "extends": "@geminai/tsconfig",
   "include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.mjs",
+    "**/*.cjs",
     "**/*.ts",
+    "**/*.tsx",
+    "**/*.mts",
+    "**/*.cts",
+    "**/*.json",
     ".eslintrc.cjs",
+  ],
+  "exclude": [
+    "**/dist",
+    "**/@types"
   ]
 }
