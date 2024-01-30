@@ -4,21 +4,43 @@
       "cache": true
     },
     "test": {
-      "outputs": ["{projectRoot}/coverage"],
+      "outputs": [
+        "{projectRoot}/coverage"
+      ],
       "cache": true
     },
     "build": {
-      "dependsOn": ["lint", "test", "^build"],
-      "outputs": ["{projectRoot}/dist", "{projectRoot}/@types"],
+      "dependsOn": [
+        "lint",
+        "test",
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/dist",
+        "{projectRoot}/@types"
+      ],
       "cache": true
     },
     "publish": {
-      "dependsOn": ["lint", "test", "build"],
+      "dependsOn": [
+        "build"
+      ],
       "cache": true
+    }
+  },
+  "release": {
+    "version": {
+      "conventionalCommits": true
     }
   },
   "affected": {
     "defaultBase": "main"
   },
-  "includeScripts": ["lint", "test", "build", "publish", "g:version"]
+  "includeScripts": [
+    "lint",
+    "test",
+    "build",
+    "publish",
+    "g:version"
+  ]
 }

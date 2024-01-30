@@ -4,19 +4,24 @@ import path from 'path'
 import prompts from 'prompts'
 import yargs from 'yargs/yargs'
 import { fileURLToPath } from 'url'
-const init = async () => {
-  const config = useConfig(path.join(path.dirname(fileURLToPath(import.meta.url)), 'config.json'))
+
+export const useApiKey = async () => {
+  const config = useConfig(path.join(path.dirname(fileURLToPath(import.meta.url)), '../config.json'))
+  const apiKey = yargs(process.argv.slice(2))
+    .options('apiKey', {
+      alias: 'k',
+      type: 'string',
+      description: 'https://makersuite.google.com/app/apikey',
+    })
+    .parseSync().apiKey
+
+  if (apiKey) {
+    config.setValue('apiKey', apiKey)
+  }
+
   const existingAiKey = config.getValue('apiKey')
 
   if (existingAiKey === null || existingAiKey.trim() === '') {
-    const apiKey = yargs(process.argv.slice(2))
-      .options('apiKey', {
-        alias: 'k',
-        type: 'string',
-        description: 'https://makersuite.google.com/app/apikey',
-      })
-      .parseSync().apiKey
-
     if (!apiKey) {
       const response = await prompts(
         {
@@ -48,5 +53,3 @@ const init = async () => {
   }
   return existingAiKey
 }
-
-export default init

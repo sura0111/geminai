@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  root: __dirname,
   resolve: {
     alias: {
       '@': __dirname,

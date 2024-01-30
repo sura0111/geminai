@@ -20,8 +20,4 @@
     "**/*.json",
     ".eslintrc.cjs",
   ],
-  "exclude": [
-    "dist",
-    "@types"
-  ]
 }

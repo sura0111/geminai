@@ -4,15 +4,16 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 yarn g:vite-node ./index.ts",
+    "geminai": "yarn g:vite-node ./bin/geminai.ts",
     "lint": "yarn g:lint",
     "test": "yarn g:test",
     "build": "yarn g:build",
-    "publish": "yarn g:build && yarn g:publish"
+    "publish": "yarn g:publish"
   },
   "main": "./dist/index.mjs",
+  "types": "./@types/index.d.ts",
   "bin": {
-    "geminai": "./dist/index.mjs"
+    "geminai": "./dist/bin/geminai.mjs"
   },
   "author": {
     "name": "Sura Kh",
@@ -30,7 +31,8 @@
     "ai",
     "chatbot",
     "terminal",
-    "code helper"
+    "code helper",
+    "nodejs"
   ],
   "files": [
     "dist",

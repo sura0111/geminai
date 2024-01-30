@@ -11,10 +11,20 @@
     {
       "name": "tsconfig",
       "path": "./packages/tsconfig/"
+    },
+    {
+      "name": "eslint-config",
+      "path": "./packages/eslint-config-geminai/"
     }
   ],
   "settings": {
     "javascript.preferences.importModuleSpecifier": "shortest",
+    "eslint.workingDirectories": [
+      ".",
+      "./packages/chat",
+      "./packages/tsconfig",
+      "./packages/eslint-config-geminai"
+    ],
     "files.exclude": {
       "**/.git": true,
       "**/.svn": true,
@@ -25,6 +35,7 @@
       "**/.ruby-lsp": true,
       ".nx": true,
       ".yarn": true,
+      ".husky": true,
       "**/node_modules": true,
       "**/dist": true,
       "**/coverage": true,

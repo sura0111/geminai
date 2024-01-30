@@ -10,10 +10,9 @@
     "**/*.mts",
     "**/*.cts",
     "**/*.json",
-    ".eslintrc.cjs",
+    ".eslintrc.cjs"
   ],
   "exclude": [
-    "**/dist",
-    "**/@types"
+    "packages"
   ]
 }

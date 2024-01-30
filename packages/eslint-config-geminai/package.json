@@ -1,0 +1,12 @@
+{
+  "name": "eslint-config-geminai",
+  "type": "commonjs",
+  "scripts": {
+    "lint": "yarn g:lint"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "eslint"
+    ]
+  }
+}

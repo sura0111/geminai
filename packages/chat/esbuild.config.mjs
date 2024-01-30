@@ -2,9 +2,10 @@ import esbuild from 'esbuild'
 import { nodeExternalsPlugin } from 'esbuild-node-externals'
 
 await esbuild.build({
-  entryPoints: ['./index.ts'],
+  entryPoints: ['./index.ts', './bin/geminai.ts'],
   bundle: true,
-  outfile: 'dist/index.mjs',
+  outdir: 'dist',
+  outExtension: { '.js': '.mjs' },
   platform: 'node',
   format: 'esm',
   plugins: [nodeExternalsPlugin({ allowWorkspaces: true })],
