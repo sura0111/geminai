@@ -22,3 +22,24 @@ jobs:
           # this is a built-in strategy in release-please, see "Action Inputs"
           # for more options
           release-type: 'node'
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+      - name : Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Enable Corepack
+        run: corepack enable
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Set yarn version
+        run: yarn set version self
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Install dependencies
+        run: yarn install
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Run publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
