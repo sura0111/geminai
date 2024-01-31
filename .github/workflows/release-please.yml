@@ -26,6 +26,7 @@ jobs:
           # for more options
           release-type: 'node'
           monorepo-tags: true
+          path: 'packages/chat'
   publish:
     runs-on: ubuntu-latest
     needs: 
