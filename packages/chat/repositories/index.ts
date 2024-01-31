@@ -1,3 +1,6 @@
 export * from './geminaiRest'
 export * from './config'
 export * from './logger'
+export * from './chatHistory'
+export * from './args'
+export * from './readFile'

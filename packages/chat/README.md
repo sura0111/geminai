@@ -1,10 +1,10 @@
 # Geminai
 
-Geminai is a terminal-based AI chatbot that runs on Node.js. It is a powerful tool for developers, researchers, and anyone else who wants to interact with a natural language AI.
+Geminai is a terminal-based AI chatbot that runs on Node.js.
 
 ## Installation
 
-To install Geminai globally, run the following command:
+To globally install Geminai, run the following command:
 
 ```sh
 yarn global add geminai-chat-terminal
@@ -18,31 +18,53 @@ yarn add -D geminai-chat-terminal
 
 ## Usage
 
-Once Geminai is installed, you can start a chat session by running the following command:
+Once Geminai is installed, you can initiate a chat session by running the following command:
 
 ```sh
 geminai
 ```
 
-You can also start it by running the following command, if you're installed locally:
+If you've installed it locally, you can also start it by running the following command:
 
 ```sh
 yarn geminai
 ```
 
-You can also specify an API key using the --apiKey or -k flag, once it's registered it will not ask again. If apiKey is not provided, it will prompt you to enter it.
+You can also specify an API key using the --apiKey or -k flag. Once it's registered, it will not ask again. If the apiKey is not provided, it will prompt you to enter it.
 
 ```sh
 geminai --apiKey=YOUR_API_KEY
 ```
 
-You can now interact with the AI by typing messages into the terminal window. Geminai will respond to your messages in a natural and informative way.
+You can also specify additional options, such as the condition that will trigger the AI's response and the AI's response to the condition, using the following flags:
 
-## Features
+* `--condition` or `-c`: The condition that will trigger the AI's response.
+* `--response` or `-r`: The AI's response to the condition.
+* `--file` or `-f`: The path to a file containing code as an input.
 
-Geminai is based on the Gemini AI chat feature. These features include:
+For instance, to begin a chat session with the AI where the condition is "What is the weather today?" and the response is "It is currently 72 degrees Fahrenheit and sunny in San Francisco.", you would run the following command:
 
-* API key support: You can specify an API key using the `--apiKey` or `-k` flag.
-* Natural language processing: Geminai uses natural language processing to understand your messages and generate responses that are both informative and engaging.
-* Knowledge base: Geminai has a built-in knowledge base that allows it to answer a wide range of questions on a variety of topics.
-* Conversational AI: Geminai is able to carry on conversations with users in a natural and engaging way. It can remember previous conversations and use that information to inform its responses.
+```sh
+geminai --condition="What is the weather today?" --response="It is currently 72 degrees Fahrenheit and sunny in San Francisco."
+```
+
+You can now interact with the AI by typing messages into the terminal window. Geminai will respond to your messages in a natural and informative manner.
+
+## Options
+
+* `--apiKey` or `-k`:  
+ It is required and will be prompted for the first time. A new key will be stored in the keychain.
+* `--condition` or `-c`:  
+ **Description:** The condition that will trigger the AI's response.  
+ **Default:** "You are a professional full-stack engineer who utilizes Node.js, TypeScript, Vite, Vue, React, Vite, NextJs, and NuxtJs."  
+ **Example:** `geminai --condition "your custom condition"`
+* `--response` or `-r`:  
+ **Description**: The AI's response to the condition.
+ **Default:** "Hi, What would you like to know?"  
+ **Example:** `geminai --response="Thank you for your question. I am a large language model, trained by Google."`
+* `--file` or `-f`:  
+ **Description:** The path to a file containing code as an input.  
+ **Default:** None  
+ **Example:** `geminai --file="./code.js"`
+
+

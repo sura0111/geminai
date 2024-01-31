@@ -1,25 +1,16 @@
-import fs from 'node:fs'
-import { type ConfigKeyProperty } from '@/types'
+import keytar from 'keytar'
 
-export const useConfig = (filePath: string) => {
-  const hasFile = fs.existsSync(filePath)
-  if (!hasFile) {
-    fs.writeFileSync(filePath, '{}')
-  }
-  const store: ConfigKeyProperty = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-
+export const useConfig = (service: string, account: string) => {
   const configStore = {
-    getValue: <T extends keyof ConfigKeyProperty>(key: T): ConfigKeyProperty[T] | null => {
-      return store[key] ?? null
+    getValue: async (key: string): Promise<string | null> => {
+      return await keytar.getPassword(service, account)
     },
-    setValue: <T extends keyof ConfigKeyProperty>(key: T, value: ConfigKeyProperty[T] | null) => {
+    setValue: async (key: string, value: string | null) => {
       if (value === null) {
-        // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
-        delete store[key]
+        await keytar.deletePassword(service, account)
       } else {
-        store[key] = value
+        await keytar.setPassword(service, account, value)
       }
-      fs.writeFileSync(filePath, JSON.stringify(store, undefined, 2))
     },
   }
 

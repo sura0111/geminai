@@ -1,31 +1,25 @@
-import { useConfig } from '@/repositories'
-import { logger } from '@/services/logger'
-import path from 'path'
+import { args, useConfig } from '@/repositories'
+import { logger } from '@/services/core/logger'
 import prompts from 'prompts'
-import yargs from 'yargs/yargs'
-import { fileURLToPath } from 'url'
+import { ConfigKey, serviceName } from '@/constants'
+import os from 'node:os'
 
 export const useApiKey = async () => {
-  const config = useConfig(path.join(path.dirname(fileURLToPath(import.meta.url)), '../config.json'))
-  const apiKey = yargs(process.argv.slice(2))
-    .options('apiKey', {
-      alias: 'k',
-      type: 'string',
-      description: 'https://makersuite.google.com/app/apikey',
-    })
-    .parseSync().apiKey
+  const config = useConfig(serviceName, os.userInfo().username)
+
+  const apiKey = args.apiKey
 
   if (apiKey) {
-    config.setValue('apiKey', apiKey)
+    await config.setValue(ConfigKey.apiKey, apiKey)
   }
 
-  const existingAiKey = config.getValue('apiKey')
+  const existingAiKey = await config.getValue(ConfigKey.apiKey)
 
   if (existingAiKey === null || existingAiKey.trim() === '') {
     if (!apiKey) {
       const response = await prompts(
         {
-          name: 'apiKey',
+          name: ConfigKey.apiKey,
           type: 'password',
           message: 'Enter your Gemini API key:',
           instructions: 'https://makersuite.google.com/app/apikey',
@@ -44,10 +38,10 @@ export const useApiKey = async () => {
       )
 
       const apiKey = response.apiKey as string
-      config.setValue('apiKey', apiKey)
+      await config.setValue(ConfigKey.apiKey, apiKey)
       return apiKey
     } else {
-      config.setValue('apiKey', apiKey)
+      await config.setValue(ConfigKey.apiKey, apiKey)
       return apiKey
     }
   }
