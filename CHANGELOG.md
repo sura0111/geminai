@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/sura0111/geminai/compare/v0.2.0...v0.2.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* monorepo versioning bug ([5541501](https://github.com/sura0111/geminai/commit/55415011b20ed9b64cf900ebb18e431e1cf7f33e))
+
 ## [0.2.0](https://github.com/sura0111/geminai/compare/v0.1.3...v0.2.0) (2024-01-31)
 
 
