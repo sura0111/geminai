@@ -46,6 +46,7 @@
       "**/.ruby-lsp": true,
       ".nx": true,
       ".yarn": true,
+      ".github": true,
       ".husky": true,
       "**/node_modules": true,
       "**/dist": true,
