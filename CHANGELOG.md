@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/sura0111/geminai/compare/v0.1.1...v0.1.2) (2024-01-31)
+
+
+### Bug Fixes
+
+* git hub actions ([5a2c68f](https://github.com/sura0111/geminai/commit/5a2c68fa25e5490bbd1ae5606e9a02fb649d3a4a))
+
 ## [0.1.1](https://github.com/sura0111/geminai/compare/v0.1.0...v0.1.1) (2024-01-31)
 
 
