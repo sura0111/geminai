@@ -1,6 +1,5 @@
 {
   "name": "geminai",
-  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "private": true,
@@ -15,12 +14,12 @@
     "g:vitest": "cd $INIT_CWD && yarn vitest",
     "g:test": "yarn g:vitest run",
     "g:lint": "yarn g:eslint --ext .js,.jsx,.mjs,.cjs,.ts,.tsx,.mts,.cts,.json ./",
-    "prepare": "husky install",
-    "lint": "nx run-many --target=lint --all",
-    "build": "nx run-many --target=build --all",
+    "lint": "nx run-many -t lint",
+    "build": "nx run-many -t build",
+    "publish": "nx run-many -t publish",
     "test": "yarn vitest run",
     "geminai": "yarn workspace geminai-chat-terminal run geminai",
-    "publish": "nx release"
+    "postinstall": "husky"
   },
   "workspaces": [
     "packages/*"
@@ -30,6 +29,10 @@
     "*.{js,jsx,cjs,mjs,ts,tsx,mts,cts}": [
       "eslint"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sura0111/geminai.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
@@ -56,7 +59,7 @@
     "https-proxy-agent": "^7.0.2",
     "husky": "^9.0.7",
     "lint-staged": "^15.2.0",
-    "nx": "17.2.8",
+    "nx": "^17.3.0",
     "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",

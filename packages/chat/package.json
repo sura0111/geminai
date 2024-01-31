@@ -1,6 +1,6 @@
 {
-  "version": "0.0.1",
   "name": "geminai-chat-terminal",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "geminai": "yarn g:vite-node ./bin/geminai.ts",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:sura0111/geminai.git",
+    "url": "git+https://github.com/sura0111/geminai.git",
     "directory": "packages/chat"
   },
   "keywords": [
