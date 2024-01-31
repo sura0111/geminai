@@ -14,11 +14,12 @@
     "g:vitest": "cd $INIT_CWD && yarn vitest",
     "g:test": "yarn g:vitest run",
     "g:lint": "yarn g:eslint --ext .js,.jsx,.mjs,.cjs,.ts,.tsx,.mts,.cts,.json ./",
-    "prepare": "husky install",
-    "lint": "nx run-many --target=lint --all",
-    "build": "nx run-many --target=build --all",
+    "lint": "nx run-many -t lint",
+    "build": "nx run-many -t build",
+    "publish": "nx run-many -t publish",
     "test": "yarn vitest run",
-    "geminai": "yarn workspace geminai-chat-terminal run geminai"
+    "geminai": "yarn workspace geminai-chat-terminal run geminai",
+    "postinstall": "husky"
   },
   "workspaces": [
     "packages/*"
