@@ -10,7 +10,7 @@
     "g:vite-node": "cd $INIT_CWD && vite-node",
     "g:tsc": "cd $INIT_CWD && tsc",
     "g:build": "cd $INIT_CWD && yarn g:rimraf dist && node esbuild.config.mjs && yarn g:tsc",
-    "g:publish": "cd $INIT_CWD && yarn npm publish",
+    "g:publish": "cd $INIT_CWD && npm publish",
     "g:version": "cd $INIT_CWD && yarn version",
     "g:vitest": "cd $INIT_CWD && yarn vitest",
     "g:test": "yarn g:vitest run",
