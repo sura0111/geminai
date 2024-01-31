@@ -1,6 +1,6 @@
 {
   "name": "geminai-chat-terminal",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "type": "module",
   "scripts": {
     "geminai": "yarn g:vite-node ./bin/geminai.ts",
