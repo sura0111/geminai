@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/sura0111/geminai/compare/v0.2.1...v0.2.2) (2024-01-31)
+
+
+### Bug Fixes
+
+* npm release ([5f110eb](https://github.com/sura0111/geminai/commit/5f110eb482ac72d7846ee2746fca49a47f671b95))
+
 ## [0.2.1](https://github.com/sura0111/geminai/compare/v0.2.0...v0.2.1) (2024-01-31)
 
 
