@@ -4966,7 +4966,7 @@ __metadata:
     prompts: "npm:^2.4.2"
     yargs: "npm:^17.7.2"
   bin:
-    geminai: dist/bin/geminai.cjs
+    geminai: dist/bin/geminai.mjs
   languageName: unknown
   linkType: soft
 

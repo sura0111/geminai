@@ -9,10 +9,10 @@
     "build": "yarn g:build",
     "release": "yarn g:publish"
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.mjs",
   "types": "./@types/index.d.ts",
   "bin": {
-    "geminai": "dist/bin/geminai.cjs"
+    "geminai": "dist/bin/geminai.mjs"
   },
   "author": {
     "name": "Sura Kh",
