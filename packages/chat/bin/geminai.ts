@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { args } from '@/repositories'
 import { createChat, useApiKey, useGeminai } from '@/services'
 
