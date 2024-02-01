@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/sura0111/geminai/compare/geminai-v1.0.1...geminai-v1.0.2) (2024-02-01)
+
+
+### Bug Fixes
+
+* bug ([3fd68cf](https://github.com/sura0111/geminai/commit/3fd68cf36fb516099ed41a0bf7cefa999757129d))
+
 ## [1.0.1](https://github.com/sura0111/geminai/compare/geminai-v1.0.0...geminai-v1.0.1) (2024-02-01)
 
 
