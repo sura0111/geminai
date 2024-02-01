@@ -39,11 +39,11 @@ jobs:
       - name: Set yarn version
         run: yarn set version self
 
-      - name: Install dependencies
-        run: yarn install
-      
       - name: Set token
         run: yarn config set npmAuthToken ${{secrets.NPM_TOKEN}}
+
+      - name: Install dependencies
+        run: yarn install
 
       - name: Run publish
         run: yarn release
