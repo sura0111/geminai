@@ -22,9 +22,15 @@ jobs:
 
       - name: Set yarn version
         run: yarn set version self
+      
+      - name: Set token
+        run: yarn config set npmAuthToken ${{secrets.NPM_TOKEN}}
 
       - name: Install dependencies
         run: yarn install
 
       - name: Run build
         run: yarn build
+
+      - name: Unset token
+        run: yarn config unset npmAuthToken

@@ -46,7 +46,7 @@ jobs:
         run: yarn config set npmAuthToken ${{secrets.NPM_TOKEN}}
 
       - name: Run publish
-        run: yarn publish
+        run: yarn release
 
       - name: Unset token
         run: yarn config unset npmAuthToken
