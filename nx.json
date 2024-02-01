@@ -21,7 +21,7 @@
       ],
       "cache": true
     },
-    "publish": {
+    "release": {
       "dependsOn": [
         "build"
       ],
@@ -49,6 +49,6 @@
     "lint",
     "test",
     "build",
-    "publish"
+    "release"
   ]
 }
