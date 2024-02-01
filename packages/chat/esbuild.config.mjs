@@ -5,8 +5,7 @@ await esbuild.build({
   entryPoints: ['./index.ts', './bin/geminai.ts'],
   bundle: true,
   outdir: 'dist',
-  outExtension: { '.js': '.mjs' },
+  outExtension: { '.js': '.cjs' },
   platform: 'node',
-  format: 'esm',
   plugins: [nodeExternalsPlugin({ allowWorkspaces: true })],
 })
