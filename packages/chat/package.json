@@ -1,6 +1,6 @@
 {
   "name": "geminai-chat-terminal",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "type": "module",
   "scripts": {
     "geminai": "yarn g:vite-node ./bin/geminai.ts",
@@ -9,10 +9,10 @@
     "build": "yarn g:build",
     "publish": "yarn g:publish"
   },
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
   "types": "./@types/index.d.ts",
   "bin": {
-    "geminai": "./dist/bin/geminai.mjs"
+    "geminai": "./dist/bin/geminai.cjs"
   },
   "author": {
     "name": "Sura Kh",
