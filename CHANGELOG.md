@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/sura0111/geminai/compare/geminai-v1.0.0...geminai-v1.0.1) (2024-02-01)
+
+
+### Bug Fixes
+
+* hide release please manifest from vscode ([6ea0b15](https://github.com/sura0111/geminai/commit/6ea0b158fd7f8a8fee3a9ca6ecdbfa803bc33044))
+
 ## 1.0.0 (2024-02-01)
 
 
