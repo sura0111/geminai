@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/sura0111/geminai/compare/geminai-chat-terminal-v1.0.2...geminai-chat-terminal-v1.0.3) (2024-02-01)
+
+
+### Bug Fixes
+
+* bug ([b9ecc15](https://github.com/sura0111/geminai/commit/b9ecc151bacdb2641175092feec3efafb8fe945e))
+
 ## [1.0.2](https://github.com/sura0111/geminai/compare/geminai-chat-terminal-v1.0.1...geminai-chat-terminal-v1.0.2) (2024-02-01)
 
 
