@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/sura0111/geminai/compare/geminai-v1.0.4...geminai-v1.0.5) (2024-02-01)
+
+
+### Bug Fixes
+
+* global script ([5d8f923](https://github.com/sura0111/geminai/commit/5d8f923519d54a0751828089a21d7f8409cb1247))
+
 ## [1.0.4](https://github.com/sura0111/geminai/compare/geminai-v1.0.3...geminai-v1.0.4) (2024-02-01)
 
 
