@@ -51,6 +51,7 @@
       "**/dist": true,
       "**/coverage": true,
       "**/@types": true,
+      ".release-please-manifest.json": true,
     }
   }
 }
