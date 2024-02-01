@@ -3,7 +3,7 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "g:rimraf": "cd $INIT_CWD && rimraf",
     "g:eslint": "cd $INIT_CWD && eslint",
